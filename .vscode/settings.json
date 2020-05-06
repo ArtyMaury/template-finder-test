@@ -1,0 +1,7 @@
+{
+  "templateFinder.extension.activated": true,
+  "templateFinder.variables.externalVariables": [
+    "^external_.*",
+    "^ansible_.*"
+  ],
+}
