@@ -1,0 +1,317 @@
+# ===================================================================
+# CONF COMMUNE A TOUS LES APPLICATIONS
+# ===================================================================
+
+# ----------------------------------------
+# ENV
+# ----------------------------------------
+
+# Définition de l'environnement (PPROD, PROD, AP1, QRU, etc)
+env_nom: DEV
+
+# ----------------------------------------
+# WEB PROPERTIES
+# ----------------------------------------
+
+# Tracer les flux HTTP IN ou OUT
+jersey_http_debug_enabled: true
+
+# ----------------------------------------
+# SECURITY PROPERTIES
+# ----------------------------------------
+
+security_oauth2_authorizeurl: https://dev_fake_url.com
+security_oauth2_verifyurl: https://dev_fake_url.com
+
+# TRANSACTION
+
+# Default transaction timeout in seconds
+spring_transaction_defaulttimeout: 30
+
+# ----------------------------------------
+# INTEGRATION PROPERTIES
+# ----------------------------------------
+
+#
+# PROJECT ASYNCHRONE
+#
+
+# INFRA RABBITMQ
+rabbitmq_host: mqaas.pin.dev.com
+rabbitmq_port: 5672
+rabbitmq_virtualhost: "/project/{{ env_nom|lower }}"
+rabbitmq_username: project
+rabbitmq_password: project
+rabbitmq_connexiontimeout: 500
+rabbitmq_requestheatbeat: 60
+rabbitmq_queuenaming_prefix: "{{ env_nom|lower }}_"
+
+#
+# PROJECT SYNCHRONE
+#
+
+restclient_project_service_baseurl: https://dev_fake_url.com
+
+# UTILISATEURS
+
+# creerOuModifierUtilisateur
+restclient_project_service_creeroumodifierutilisateur_readms: 10000
+restclient_project_service_creeroumodifierutilisateur_pool_max: 20
+
+# consulterUtilisateur
+restclient_project_service_consulterutilisateur_readms: 20000
+restclient_project_service_consulterutilisateur_pool_max: 20
+
+# rechercherUtilisateurs
+restclient_project_service_rechercherutilisateurs_readms: 10000
+restclient_project_service_rechercherutilisateurs_pool_max: 20
+
+# ANNONCES
+
+# creerAnnonce
+restclient_project_service_creerannonce_readms: 10000
+restclient_project_service_creerannonce_pool_max: 20
+
+# rechercherAnnonces
+restclient_project_service_rechercherannonces_readms: 10000
+restclient_project_service_rechercherannonces_pool_max: 20
+
+# modifierAnnonce
+restclient_project_service_modifierannonce_readms: 10000
+restclient_project_service_modifierannonce_pool_max: 20
+
+# supprimerAnnonce
+restclient_project_service_supprimerannonce_readms: 10000
+restclient_project_service_supprimerannonce_pool_max: 20
+
+# ANNUAIRE
+
+# rechercherGroupesAnnuaire
+restclient_project_service_recherchergroupesannuaire_readms: 10000
+restclient_project_service_recherchergroupesannuaire_pool_max: 20
+
+# rechercherUtilisateursAnnuaire
+restclient_project_service_rechercherutilisateursannuaire_readms: 10000
+restclient_project_service_rechercherutilisateursannuaire_pool_max: 20
+
+# CMDB
+
+# rechercherUHsCMDB
+restclient_project_service_rechercheruhscmdb_readms: 10000
+restclient_project_service_rechercheruhscmdb_pool_max: 20
+
+# rechercherSTsCMDB
+restclient_project_service_rechercherstscmdb_readms: 10000
+restclient_project_service_rechercherstscmdb_pool_max: 20
+
+# ST
+
+# consulterST
+restclient_project_service_consulterst_readms: 10000
+restclient_project_service_consulterst_pool_max: 20
+
+# creerOuModifierST
+restclient_project_service_creeroumodifierst_readms: 10000
+restclient_project_service_creeroumodifierst_pool_max: 20
+
+# rechercherST
+restclient_project_service_rechercherst_readms: 10000
+restclient_project_service_rechercherst_pool_max: 20
+
+# CARTOGRAPHIE
+
+# creerOuModifierCartographie
+restclient_project_service_creeroumodifiercartographie_readms: 10000
+restclient_project_service_creeroumodifiercartographie_pool_max: 20
+
+# rechercherCartographies
+restclient_project_service_recherchercartographies_readms: 10000
+restclient_project_service_recherchercartographies_pool_max: 20
+
+# rechercherCartographiesSTs
+restclient_project_service_recherchercartographiessts_readms: 10000
+restclient_project_service_recherchercartographiessts_pool_max: 20
+
+# rechercherProfilsMembre
+restclient_project_service_rechercherprofilsmembre_readms: 10000
+restclient_project_service_rechercherprofilsmembre_pool_max: 20
+
+# rechercherCiblesST
+restclient_project_service_rechercherciblesst_readms: 10000
+restclient_project_service_rechercherciblesst_pool_max: 20
+
+# consulterCartographie
+restclient_project_service_consultercartographie_readms: 10000
+restclient_project_service_consultercartographie_pool_max: 20
+
+# supprimerCartographie
+restclient_project_service_supprimercartographie_readms: 10000
+restclient_project_service_supprimercartographie_pool_max: 20
+
+# rechercherCartographie
+restclient_project_service_recherchercartographie_readms: 10000
+restclient_project_service_recherchercartographie_pool_max: 20
+
+# DEPLOIEMENT
+
+# rechercherVersionsST
+restclient_project_service_rechercherversionsst_readms: 10000
+restclient_project_service_rechercherversionsst_pool_max: 20
+
+# deployerST
+restclient_project_service_deployerst_readms: 10000
+restclient_project_service_deployerst_pool_max: 20
+
+# annulerDeploiementST
+restclient_project_service_annulerdeploiementst_readms: 10000
+restclient_project_service_annulerdeploiementst_pool_max: 20
+
+# consulterLogJob
+restclient_project_service_consulterlogjob_readms: 10000
+restclient_project_service_consulterlogjob_pool_max: 20
+
+# consulterDeploiement
+restclient_project_service_consulterdeploiement_readms: 10000
+restclient_project_service_consulterdeploiement_pool_max: 20
+
+# consulterLogDeploiement
+restclient_project_service_consulterlogdeploiement_readms: 10000
+restclient_project_service_consulterlogdeploiement_pool_max: 20
+
+# rechercherDeploiements
+restclient_project_service_rechercherdeploiements_readms: 10000
+restclient_project_service_rechercherdeploiements_pool_max: 20
+
+#
+# PROJECT LEGACY
+#
+
+# Débouchonné -> restclient_projectlegacy_service_baseurl: https://dev_fake_url.com
+# Bouchonné   -> restclient_projectlegacy_service_baseurl: https://dev_fake_url.com
+restclient_projectlegacy_service_baseurl: https://dev_fake_url.com
+
+# deployerST
+restclient_projectlegacy_service_deployerst_readms: 10000
+restclient_projectlegacy_service_deployerst_pool_max: 20
+
+# annulerDeploiement
+restclient_projectlegacy_service_annulerdeploiement_readms: 10000
+restclient_projectlegacy_service_annulerdeploiement_pool_max: 20
+
+# consulterLogDeploiement
+restclient_projectlegacy_service_consulterlogdeploiement_readms: 10000
+restclient_projectlegacy_service_consulterlogdeploiement_pool_max: 20
+
+#
+# ANNUAIRES LDAP
+#
+
+scheduler_tasks_ldap_internes_fixedRate: 600000
+scheduler_tasks_ldap_externes_fixedRate: 600000
+scheduler_tasks_ldap_groupes_fixedRate: 600000
+
+#
+# CMDB
+#
+
+restclient_bynow_service_baseurl: https://dev_fake_url.com
+restclient_bynow_service_security_basicauth_username: webservice_cmdb
+restclient_bynow_service_security_basicauth_password: Passwd
+restclient_bynow_service_readms: 10000
+restclient_bynow_service_pool_max: 20
+
+#
+# NEXUS
+#
+
+restclient_nexus_service_baseurl: https://dev_fake_url.com
+restclient_nexus_service_readms: 10000
+restclient_nexus_service_pool_max: 20
+
+#
+# GLOUTON
+#
+
+restclient_glouton_service_baseurl: https://dev_fake_url.com
+restclient_glouton_service_apitoken: Passwd
+restclient_glouton_service_readms: 10000
+restclient_glouton_service_pool_max: 20
+
+# ----------------------------------------
+# INFRA
+# ----------------------------------------
+
+# HARDWARE
+aws_stack_instancetype: t3.nano
+
+# AUTOSCALING
+aws_stack_autoscaling_min: 1
+aws_stack_autoscaling_max: 2
+
+# DNS
+prefix_dns: "{{ env_nom|lower }}."
+suffixe_dns: tbd.euw1r53.com
+serveurs_dns: "172.17.160.26 172.17.160.27"
+
+# NETWORK
+internet_proxy: proxy-int.pin.tbd.euw1r53.com:3128
+
+# AWS
+aws_stack_domaine: TESTBED
+
+# ----------------------------------------
+# APP
+# ----------------------------------------
+
+# JAVA
+
+# Options transmises à la JVM
+app_java_opts: "-Xms256M -Xmx256M -XX:MaxMetaspaceSize=128m"
+
+# Tracer les requêtes SQL
+hibernate_sql_debug_enabled: true
+
+# Tracer les requêtes au LDAP
+ldap_debug_enabled: true
+
+# BOOT
+
+# Temps max pour le démarrage de l'app (au-delà, le démarrage sera déclaré KO)
+app_start_timeoutsec: 180
+
+# ----------------------------------------
+# LOGGING PROPERTIES
+# ----------------------------------------
+
+# PRISME
+
+prisme_rabbitmq_host: rabbit-prisme.pin.dev.com
+prisme_rabbitmq_port: 5672
+prisme_rabbitmq_exchange: PRISME_DEV_V2_PROJECT
+prisme_rabbitmq_username: PROJECT
+prisme_rabbitmq_password: Passwd
+
+# METROMAN
+
+metroman_rabbitmq_host: metroman-1y.pin.dev.com
+metroman_rabbitmq_port: 2003
+
+#      _____________________
+#_____/  GDA                \_________________________
+#-----------------------------------------------------
+aim_path: "/opt/CARKaim/sdk/clipasswordsdk"
+aim_folder: "root"
+aim_appid: project_GDA_bt1svuef
+aim_coffre: APPLI_Metier-PROJECT-PP
+aim_object_cle_cryptage_ansible_vault: CLE_VAULT_PROJECT_TBD
+aim_object_win_user: idpwintb_PROD
+
+aim_db_password: "bdd_project_admin"
+aim_db_password_administration_adm: "administration_adm"
+aim_db_password_configuration_adm: "configuration_adm"
+aim_db_password_deploiement_adm: "deploiement_adm"
+
+#
+# GITLAB
+#
+gitlab_baseurl: "https://dev_fake_url.com"

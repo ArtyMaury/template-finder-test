@@ -1,0 +1,9 @@
+# ===================================================================
+# CONF SPECIFIQUE A L'APP RESSOURCES-ADMINISTRATION
+# ===================================================================
+
+# ----------------------------------------
+# BUSINESS PROPERTIES
+# ----------------------------------------
+service_recherchermembresannuaire_pool_max: 20
+service_recherchermembresannuaire_timeout_readms: 60000

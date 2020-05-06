@@ -1,0 +1,17 @@
+# ===================================================================
+# CONF SPECIFIQUE A L'APP RESSOURCES-ADMINISTRATION
+# ===================================================================
+
+security_oauth2_client_truststore: /opt/ressources-administration/etc/cacerts.jks
+security_oauth2_client_truststore_password: Passwd
+
+composant_files_to_download:
+  - { url: "https://fake_url.com
+
+
+# ----------------------------------------
+# BUSINESS PROPERTIES
+# ----------------------------------------
+
+service_recherchermembresannuaire_pool_max: 20
+service_recherchermembresannuaire_timeout_readms: 60000

@@ -1,0 +1,10 @@
+allMatching: 10
+
+object:
+  attribute: toto
+
+list:
+  - name: titi
+    email: titi@gmail.com
+  - name: toto
+    email: toto@gmail.com

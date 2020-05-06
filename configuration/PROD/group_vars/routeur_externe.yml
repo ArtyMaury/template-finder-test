@@ -1,0 +1,6 @@
+# ----------------------------------------
+# INFRA
+# ----------------------------------------
+
+# AWS
+aws_certificate_ssl: arn:aws:acm:eu-west-1:123:certificate/89d71dee-f1c9-4a44-ab6c-da3f2cafb072
